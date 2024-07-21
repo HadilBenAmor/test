@@ -8,4 +8,4 @@ The goal of the research was to analyze common pitfalls and identify how they im
 
 Our mission is to optimize the use of these ML services, ensuring they are implemented effectively in ML-service based systems. 🛠️🔧
 
-Feel free to explore our **Online Catalog here:** https://hadilbenamor.github.io/ML-service-misuses/ 🌐 ! 🌟
+Feel free to explore our **Online Catalog here:** https://ml-service-misuses.github.io/ML-service-misuses/ 🌐 ! 🌟
