@@ -1,0 +1,181 @@
+/* styles.css */
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 60px; /* Add enough space for the footer */
+}
+
+
+.hero {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.services {
+    margin-top: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to the bottom */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(184, 50, 50, 0.1);
+    border-radius: 20px;
+    text-align: left;
+    height: 100%; /* Ensures full height for alignment */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.service-item h4 {
+    background-color: #4d87cf; /* Background color of the title */
+    color: white; /* Text color of the title */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+    margin-top: 0; /* Remove margin on top */
+    margin-bottom: 10px; /* Add some space below the title */
+}
+
+
+.open-modal {
+    margin-top: auto; /* Ensures button is at the bottom */
+    padding: 10px 20px;
+    background-color: #7d797b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+
+.open-modal:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Specific Modal Styles */
+.about-modal .modal-content {
+    background-color: white; /* White background for the About modal */
+    color: #333; /* Black or dark grey text color */
+}
+
+.contact-modal .modal-content {
+    background-color: white; /* White background for the Contact modal */
+    color: #333; /* Black or dark grey text color */
+}
+
+.label {
+    display: inline-block;
+    background-color: #e7e7e7;
+    color: #555;
+    padding: 2px 0px;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+}
+.label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #e7e7e7;
+}

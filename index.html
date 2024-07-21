@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" data-modal="modalAbout">About</a></li>
+                <li><a href="#" data-modal="modalContact">Contact</a></li>
+            </ul>
+        </nav>
+        
+   <!-- Modal Templates -->
+
+<div id="modalAbout" class="modal about-modal">
+    <div class="modal-content about-modal-content">
+        <span class="close-btn" data-modal="modalAbout">&times;</span>
+        <h2>About Details</h2>
+        <p>This website was developed as part of research focused on the misuses associated with machine learning (ML) 
+            cloud services. The goal of the research was to analyze 
+            common pitfalls and identify ways to optimize the use of these services, ensuring they are implemented effectively and ethically.</p>
+    </div>
+</div>
+
+<div id="modalContact" class="modal contact-modal">
+    <div class="modal-content contact-modal-content">
+        <span class="close-btn" data-modal="modalContact">&times;</span>
+        <h2>Contact Details</h2>
+        <p>hadil.ben-amor.1@ens.etsmtl.ca</p>
+    </div>
+</div>
+
+        <h1>ML Cloud Services Misuses</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Catalog Proposal</h2>
+        </section>
+      
+        <section class="services">
+
+            <div class="service-grid">
+                <!-- Repeat the following block for each service -->
+                <div class="service-item">
+                    <h4>Inefficient data transmission</h4>
+                    <div class="label">Data Collection and Preprocessing</div>
+                    <p>Refers to sub-optimal data transmission between
+                        components within an ML service-based system, such as between storage
+                        services, compute nodes, and other cloud resources. This results in increased
+                        latency, higher costs, and decreased performance.</p>
+                    <button class="open-modal" data-modal="modal1">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Not using batch API for data loading</h4>
+                    <div class="label">Data Collection and Preprocessing</div>
+                    <p>Cloud providers offer batch processing
+                        APIs to optimize data loading performance by handling data in batches.
+                        However, developers sometimes fail to use these batch APIs, opting instead
+                        to load data items individually or implement their own batch processing solutions.
+                        This misuse can lead to increased data transfer times, higher memory
+                        usage, and reduced overall performance. </p>
+                    <button class="open-modal" data-modal="modal2">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Non specification of early stopping criteria</h4>
+                    <div class="label">Training</div>
+                    <p>ML cloud services often
+                        provide options for setting early stopping criteria to prevent overfitting and
+                        reduce unnecessary computational costs.</p>
+                    <button class="open-modal" data-modal="modal3">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Avoiding parallel training experiments</h4>
+                    <div class="label">Training</div>
+                    <p>Cloud providers offer the capability
+                        to run parallel training experiments to speed up the model training process
+                        and improve efficiency of the system. Disabling parallel experiments can
+                        slow down the model development process and limit the exploration of different
+                        approaches within using the same resources to find the best performing model.
+                       </p>
+                    <button class="open-modal" data-modal="modal4">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Not using automatic hyperparameter tuning</h4>
+                    <div class="label">Training</div>
+                    <p>ML cloud providers offer
+                        the capability to define the search space and automatically optimize ML models
+                        hyperparameters.</p>
+                    <button class="open-modal" data-modal="modal5">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Not using training checkpoints</h4>
+                    <div class="label">Training</div>
+                    <p>Cloud providers offer the functionality to
+                        resume training from the most recent checkpoint to save the experiment’s current
+                        state, rather than starting from scratch. This can save significant time and
+                        computational resources, especially when training large and complex models.However, developers may neglect to save training checkpoints in cloud storage.
+                       </p>
+                    <button class="open-modal" data-modal="modal6">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Bad choice of training compute targets</h4>
+                    <div class="label">Training</div>
+                    <p>refers to selecting the none optimal
+                        hardware and compute resources for training ML models. Cloud providers offer
+                        various types of training computes targets, yet not all resources can be used
+                        for automated machine learning, machine learning pipelines, or designer.
+                       </p>
+                    <button class="open-modal" data-modal="modal7">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Excluding algorithms in automated ML</h4>
+                    <div class="label">Training</div>
+                    <p>Cloud providers offer automated
+                        machine learning services which for a given prediction task, they perform experiments
+                        with various ML algorithms to generate an optimized model ready for deployment
+                        . However, developers may mistakenly exclude promising candidate
+                        algorithms when configuring these services, thereby limiting the effectiveness and
+                        performance of the resulting model.</p>
+                    <button class="open-modal" data-modal="modal8">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Misinterpreting output</h4>
+                    <div class="label">Testing</div>
+                    <p>ML services offer pre-built models which operate
+                        on high-dimensional continuous representations yet often ultimately produce a
+                        small discrete set of outputs. Consequently, ML services’ output can contain
+                        complicated, easily misinterpretable semantics, leading to bugs.</p>
+                    <button class="open-modal" data-modal="modal9">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Ignoring fairness evaluation</h4>
+                    <div class="label">Testing</div>
+                    <p>ML cloud providers offer the possibility of fairness
+                        evaluation which is crucial to ensure unbiased and equitable models. However,
+                        developers may rely solely on performance metrics such as accuracy or precision
+                        to evaluate the effectiveness of a model.</p>
+                    <button class="open-modal" data-modal="modal10">Learn More</button>
+                </div>
+             
+                <div class="service-item">
+                    <h4>Ignoring testing schema mismatch</h4>
+                    <div class="label">Testing</div>
+                    <p>Cloud providers offer ML services to
+                        detect unmatched data schemas, which include feature or data distribution mismatches
+                        between training, testing, and production data, often through raising
+                        alerts. However, developers might ignore setting up these alerts or may disable
+                        them.</p>
+                    <button class="open-modal" data-modal="modal11">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Using suboptimal evaluation metrics</h4>
+                    <div class="label">Testing</div>
+                    <p>Some ML services optimize and evaluate
+                        models based on a set of specified evaluation metrics. Those metrics determines
+                        how the model’s performance is measured during training and how it
+                        should be evaluated during testing. However, developers sometimes choose suboptimal
+                        evaluation metrics, which can lead to less effective models that do not
+                        align well with business needs or dataset characteristics.</p>
+                    <button class="open-modal" data-modal="modal12">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Overwriting existing ML APIs without versioning</h4>
+                    <div class="label">Deployment</div>
+                    <p>Cloud providers
+                        ensures ML API versioning in through several practices such as Azure API management
+                        and AWS Management Console. Without version control, it
+                        becomes challenging to track changes, revert to previous versions, or understand
+                        the evolution of the deployed model. However, developers may ignore using those
+                        practices and unintentionally overwrite existing ML APIs without proper versioning
+                        which can lead to potential issues in the production environment.</p>
+                    <button class="open-modal" data-modal="modal13">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Choosing the wrong deployment endpoint</h4>
+                    <div class="label">Deployment</div>
+                    <p>Cloud providers offer online
+                        endpoints and batch endpoints for deployment. Online endpoints are mainly
+                        to operationalize models for real-time inference in synchronous low-latency requests.
+                        Meanwhile, batch endpoints are mainly to operationalize models or pipelines
+                        for long-running asynchronous inference. However, developers may choose
+                        the inappropriate deployment endpoint.</p>
+                    <button class="open-modal" data-modal="modal14">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Disabling automatic rollbacks</h4>
+                    <div class="label">Deployment</div>
+                    <p>ML cloud service providers offer features
+                        that automatically roll back to a previous stable version of a model if the newly
+                        deployed version causes errors or performance issues. However, developers might
+                        disable this feature, allowing poorly performing models to remain in production
+                        and negatively impact the system’s performance</p>
+                    <button class="open-modal" data-modal="modal15">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Disabling automatic scaling for online prediction service</h4>
+                    <div class="label">Deployment</div>
+                    <p>Automatic
+                        scaling refers to dynamically adjusting resources based on demand to ensure
+                        sufficient capacity for online prediction services. This feature helps manage varying
+                        rates of prediction requests while minimizing cloud usage costs.
+                        However, developers may turn off automatic scaling when deploying ML models,
+                        which can significantly increase inference latency during peak demand for
+                        example.</p>
+                    <button class="open-modal" data-modal="modal16">Learn More</button>
+                </div>
+             
+                <div class="service-item">
+                    <h4>Improper handling of ML API limits</h4>
+                    <div class="label">Serving</div>
+                    <p>Refers to the none respect of API
+                        rate limiting. Those limits are a set of measures put in place to help ensure the
+                        stability and performance of the ML API system. However developers
+                        may not take care of limits for a cloud-based ML API, leading to a sudden stop
+                        in predictions when the quota is exceeded.</p>
+                    <button class="open-modal" data-modal="modal17">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Misusing Synchronous/<wbr>Asynchronous APIs with deployment type</h4>
+                    <div class="label">Serving</div>
+                    <p>refers to using the inappropriate APIs for the deployment endpoint. It is not recommended
+                        to use asynchronous API requests with online predictions, meaning in
+                        situations that require timely inference and using synchronous APIs with batch
+                        endpoint deployment, meaning when an immediate response is not required and
+                        processing accumulated data by using a single request is sufficient. However
+                        developers may ignore choosing the most suitable API request which may increase
+                        latency as well as higher memory usage when using asynchronous API
+                        with online endpoint for example because each request may keep certain resources
+                        occupied.</p>
+                    <button class="open-modal" data-modal="modal18">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Non modularization of ML components</h4>
+                    <div class="label">Serving</div>
+                    <p>developers may ignore the importance
+                        of ML components modularity. Cloud providers highlight the huge need for
+                        modularized code for components and pipelines. For example, to construct ML
+                        pipelines, components need to be reusable, composable, and potentially shareable
+                        across ML pipelines. Therefore, while the Exploratory Data Analysis (EDA)
+                        code can still live in notebooks, the source code for components must be modularized
+                        . Modularization promotes reusability, maintainability, and scalability
+                        of machine learning workflows. However, developers may not opt for the ML
+                        production pipelines to retrain the models with new data and increase the human
+                        interventions.</p>
+                    <button class="open-modal" data-modal="modal19">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Calling the wrong ML service API</h4>
+                    <div class="label">Serving</div>
+                    <p>Cloud providers often offer multiple
+                        ML APIs for the same task. Without a thorough understanding of these APIs,
+                        developers might call the wrong one, leading to significantly degraded prediction
+                        accuracy, incorrect prediction results, or even software failures.</p>
+                    <button class="open-modal" data-modal="modal20">Learn More</button>
+                </div>
+
+                <div class="service-item">
+                    <h4>Ignore monitoring data drift</h4>
+                    <div class="label">Monitoring</div>
+                    <p>Refers to ignoring the need to continually assessing modifications to the statistical characteristics or distribution of data
+                        used to ensure the expected performance. Cloud providers encourage using skew
+                        and drift detection to detect when the statistical properties of the incoming
+                        data change over time in a way that affect the ML service-based system.
+                        </p>
+                    <button class="open-modal" data-modal="modal21">Learn More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
+
+ <!-- Modal Templates -->
+ <div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal1">&times;</span>
+        <h2>Inefficient data transmission</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Data Collection and Preprocessing</p>
+        
+        <h3>Example:</h3><p>Repeatedly
+            transferring training data from cloud storage to compute nodes for each job instead
+            of caching it locally can lead to significant delays in training time, increased
+            network traffic, and higher data transfer costs.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li> <p>Cao, J., Chen, B., Sun, C., Hu, L., Wu, S., Peng, X.: Understanding performance problems in deep learning systems.
+                 In: Proceedings of the 30th ACM Joint European 
+                Software Engineering Conference and Symposium on the Foundations of Software Engineering. pp. 357–369 (2022)</p></li>
+    
+        </ul>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal2">&times;</span>
+        <h2>Not using batch API for data loading</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Data Collection and Preprocessing</p>
+        
+        <h3>Example:</h3> <p>Not using a batch API can
+            cause out-of-memory errors, excessive network traffic, and significant delays in
+            data loading, ultimately slowing down model training and increasing operational
+            costs.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li> <p>Cao, J., Chen, B., Sun, C., Hu, L., Wu, S., Peng, X.: Understanding performance problems in deep learning systems.
+                In: Proceedings of the 30th ACM Joint European 
+               Software Engineering Conference and Symposium on the Foundations of Software Engineering. pp. 357–369 (2022)</p></li>
+
+        </ul>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal3">&times;</span>
+        <h2>Non specification of early stopping criteria</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Training</p>
+        
+        <h3>Example:</h3>
+        <p>Developers might neglect
+            to specify these criteria, allowing training to continue for more epochs
+            than needed. This misuse can lead to wasted computational resources, increased
+            training times, higher costs, and potential overfitting.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://cloud.google.com/bigquery/docs/preventing-overfitting" target="_blank">Reference 1</a></li>
+            <li><a href="https://shorturl.at/GYfWu" target="_blank">Reference 2</a></li>
+ 
+        </ul>
+    </div>
+</div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal4">&times;</span>
+        <h2>Avoiding parallel training experiments</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Training</p>
+        
+        <h3>Example:</h3>
+        <p>
+           Running only one training experiment at a time instead of concurrently
+            testing multiple configurations may reduce efficiency because we can
+            not quickly compare different models or hyperparmeters which is essential for
+            optimizing model performance.
+
+        </p>
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/3Sdj7rt" target="_blank">Reference 1</a></li>
+            <li><p>Serban, A., Van der Blom, K., Hoos, H., Visser, J.: Adoption and effects of software engineering best practices in machine learning. In: Proceedings of the 14th
+                ACM/IEEE International Symposium on Empirical Software Engineering and
+                Measurement (ESEM). pp. 1–12 (2020)
+                </p>></li>
+
+        </ul>
+    </div>
+</div>
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal5">&times;</span>
+        <h2>Not using automatic hyperparameter tuning</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Training</p>
+        
+        <h3>Example:</h3> <p>Dvelopers may not leverage this feature and
+            they might manually set hyperparameters, leading to potential suboptimal model
+            performance and increased training time.
+</p>
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://shorturl.at/GYfWu" target="_blank">Reference 1</a></li>
+
+        </ul>
+    </div>
+</div>
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal6">&times;</span>
+        <h2>Not using training checkpoints</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Training</p>
+        
+        <h3>Example:</h3> <p> If a model fails and checkpoints have not been saved, the entire
+            training job or pipeline will terminate, resulting in a loss of data since the model’s
+            state is not preserved in memory. Proper use of training checkpoints ensures
+            that progress is not lost and allows for more efficient and cost-effective training
+            processes
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://shorturl.at/mFzuU" target="_blank">Reference 1</a></li>
+
+        </ul>
+    </div>
+</div>
+<div id="modal7" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal7">&times;</span>
+        <h2>Bad choice of training compute targets</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Training</p>
+        
+        <h3>Example:</h3> <p> Developers may use Azure Machine Learning Kubernetes as a
+            training compute target only for ML pipelines and Azure ML designer but not
+            to train automated ML.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/3SfkAxo" target="_blank">Reference 1</a></li>
+            <li><a href="https://bit.ly/4bOmGLA" target="_blank">Reference 2</a></li>
+      
+        </ul>
+    </div>
+</div>
+<div id="modal8" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal8">&times;</span>
+        <h2>Excluding algorithms in automated ML</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Training</p>
+        
+        <h3>Example:</h3>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://shorturl.at/2Tthd" target="_blank">Reference 1</a></li>
+
+        </ul>
+    </div>
+</div>
+<div id="modal9" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal9">&times;</span>
+        <h2>Misinterpreting output</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Testing</p>
+        
+        <h3>Example:</h3> <p> Developers may misinterpret the score/magnitude as the output of sentiment
+            analysis API. According to Google’s documentation, score/magnitude
+            should be used together to judge the sentiment of the input text which makes it
+            prone to human errors.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/3Y6sUmH" target="_blank">Reference 1</a></li>
+            <li> <p>Wan, C., Liu, S., Hoffmann, H., Maire, M., Lu, S.: Are machine learning cloud apis
+                used correctly? In: 2021 IEEE/ACM 43rd International Conference on Software
+                Engineering (ICSE). pp. 125–137. IEEE (2021)</p></li>
+
+        </ul>
+    </div>
+</div>
+<div id="modal10" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal10">&times;</span>
+        <h2>Ignoring fairness evaluation</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Testing</p>
+        
+        <h3>Example:</h3> <p>Neglecting fairness
+            evaluation can lead to potential biases and unfair predictions towards specific
+            demographic groups which may negatively impact the generalizability and
+            performance of the model.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://shorturl.at/0GHFT" target="_blank">Reference 1</a></li>
+         
+        </ul>
+    </div>
+</div>
+<div id="modal11" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal11">&times;</span>
+        <h2>Ignoring testing schema mismatch</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Testing</p>
+        
+        <h3>Example:</h3> <p>Amazon ML displays alerts if the schema for the training
+            and evaluation data sources is not consistent. Disabling these alerts can result
+            in missing discrepancies, such as features present in the training data but
+            absent in the evaluation data, or detecting unexpected additional features. 
+            This oversight can lead to inaccurate model predictions and reduced performance in
+            production.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://shorturl.at/z6L57" target="_blank">Reference 1</a></li>
+   
+        </ul>
+    </div>
+</div>
+<div id="modal12" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal12">&times;</span>
+        <h2>Using suboptimal evaluation metrics</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Testing</p>
+        
+        <h3>Example:</h3> <p>According
+            to the Microsoft ML official documentation in classification tasks, metrics
+            such as accuracy, and norm_macro_recall might not perform well on small
+            datasets, datasets with significant class imbalance, or when the metric values are
+            close to 0.0 or 1.0. In such cases, AUC_weighted could be a better choice.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://shorturl.at/B3vXJ" target="_blank">Reference 1</a></li>
+   
+        </ul>
+    </div>
+</div>
+<div id="modal13" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal13">&times;</span>
+        <h2>Overwriting existing ML APIs without versioning</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Deployment</p>
+        
+        <h3>Example:</h3><p> When publishing an updated model using Azure ML Studio, if the existing
+            API is overwritten without versioning and the new model introduces
+            unexpected behavior or lower accuracy, it becomes difficult to roll back to the
+            previous version, leading to potential disruptions in the production system.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/4cYcr8u" target="_blank">Reference 1</a></li>
+            <li><a href="https://go.aws/46bLfAU" target="_blank">Reference 2</a></li>
+            <li><a href="https://bit.ly/3Ludilv" target="_blank">Reference 3</a></li>
+     
+        </ul>
+    </div>
+</div>
+<div id="modal14" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal14">&times;</span>
+        <h2>Choosing the wrong deployment endpoint</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Deployment</p>
+        
+        <h3>Example:</h3><p> Using a batch endpoint for
+            a real time task in place of online endpoint may lead to delayed inferences.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/3y6haWN" target="_blank">Reference 1</a></li>
+            <li><a href="https://bit.ly/4bLsplb" target="_blank">Reference 2</a></li>
+ 
+        </ul>
+    </div>
+</div>
+<div id="modal15" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal15">&times;</span>
+        <h2>Disabling automatic rollbacks</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Deployment</p>
+        
+        <h3>Example:</h3>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/3SdMxp7" target="_blank">Reference 1</a></li>
+            <li><a href="https://bit.ly/4d5bVph" target="_blank">Reference 2</a></li>
+            <li><p>Serban, A., Van der Blom, K., Hoos, H., Visser, J.: Adoption and effects of software engineering best practices in machine learning. In: Proceedings of the 14th
+                ACM/IEEE International Symposium on Empirical Software Engineering and
+                Measurement (ESEM). pp. 1–12 (2020)
+                </p></li>
+
+
+        </ul>
+    </div>
+</div>
+<div id="modal16" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal16">&times;</span>
+        <h2>Disabling automatic scaling for online prediction service</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Deployment</p>
+        
+        <h3>Example:</h3>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/3W8Ouog" target="_blank">Reference 1</a></li>
+            <li><a href="https://bit.ly/3zMZYX3" target="_blank">Reference 2</a></li>
+            <li><a href="https://bit.ly/4bLsy8d" target="_blank">Reference 3</a></li>
+    
+        </ul>
+    </div>
+</div>
+<div id="modal17" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal17">&times;</span>
+        <h2>Improper handling of ML API limits</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Serving</p>
+        
+        <h3>Example:</h3> <p> Exceeding the maximum
+            prompt tokens per request set by Azure OpenAI service  and not controlling
+            the size of the input prompt may lead to truncating the input to fit with the
+            limit and that lead to information loss.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/3YaSs2m" target="_blank">Reference 1</a></li>
+            <li><a href="https://bit.ly/4d4C1bW" target="_blank">Reference 2</a></li>
+            <li><a href="https://bit.ly/3WdW54K" target="_blank">Reference 3</a></li>
+        </ul>
+    </div>
+</div>
+<div id="modal18" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal18">&times;</span>
+        <h2>Misusing Synchronous/Asynchronous APIs with deployment</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Serving</p>
+        
+        <h3>Example:</h3>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/46dzMAE" target="_blank">Reference 1</a></li>
+            <li><a href="https://bit.ly/4bXR3PW" target="_blank">Reference 2</a></li>
+
+        </ul>
+    </div>
+</div>
+<div id="modal19" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal19">&times;</span>
+        <h2>Non modularization of ML components</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Serving</p>
+        
+        <h3>Example:</h3><p>The increasing need to manually test the pipeline and
+            its components as well as manually deploy new pipeline implementations.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/4bLsOnH" target="_blank">Reference 1</a></li>
+            <li><a href="https://go.aws/3xUspSi" target="_blank">Reference 2</a></li>
+
+        </ul>
+    </div>
+</div>
+<div id="modal20" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal20">&times;</span>
+        <h2>Calling the wrong ML service API</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Serving</p>
+        
+        <h3>Example:</h3> <p>Image classification and object detection are vision APIs that provide description
+            tags for input images. Image classification offers one tag for the entire image,
+            while object detection provides a tag for each object. Using image classification
+            instead of object detection can cause the software to miss important objects,
+            and using object detection instead of image classification can result in incorrect
+            image tags
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><p>Wan, C., Liu, S., Hoffmann, H., Maire, M., Lu, S.: Are machine learning cloud apis
+                used correctly? In: 2021 IEEE/ACM 43rd International Conference on Software
+                Engineering (ICSE). pp. 125–137. IEEE (2021)</p></li>
+
+        </ul>
+    </div>
+</div>
+<div id="modal21" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="modal21">&times;</span>
+        <h2>Ignore monitoring data drift</h2>
+        <p><strong>ML Pipeline Development Stage:</strong> Monitoring</p>
+        
+        <h3>Example:</h3> <p>Developers may not specify a threshold to trigger an alert when
+            monitoring data drifts in their features.
+</p>
+
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://bit.ly/4cOpdGM" target="_blank">Reference 1</a></li>
+
+        </ul>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const openButtons = document.querySelectorAll('.open-modal');
+    const closeButtons = document.querySelectorAll('.close-btn');
+    const modals = document.querySelectorAll('.modal');
+
+    // Open modal
+    openButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = 'block';
+        });
+    });
+
+    // Close modal
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = 'none';
+        });
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openButtons = document.querySelectorAll('nav ul li a');
+    const closeButtons = document.querySelectorAll('.close-btn');
+    const modals = document.querySelectorAll('.modal');
+
+    // Open modal
+    openButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            const modalId = button.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = 'block';
+        });
+    });
+
+    // Close modal
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = 'none';
+        });
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+});
+
+</script>
+
+
+        
+    </main>
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
+</body>
+</html>
