@@ -58,10 +58,10 @@
                 <div class="service-item">
                     <h4>Not using batch API for data loading</h4>
                     <div class="label">Data Collection and Preprocessing</div>
-                    <p>Cloud providers offer batch processing
+                    <p>Cloud providers offer batch-processing
                         APIs to optimize data loading performance by handling data in batches.
                         However, developers sometimes fail to use these batch APIs, opting instead
-                        to load data items individually or implement their own batch processing solutions.
+                        to load data items individually or implement their batch-processing solutions.
                         This misuse can lead to increased data transfer times, higher memory
                         usage, and reduced overall performance. </p>
                     <button class="open-modal" data-modal="modal2">Learn More</button>
@@ -69,9 +69,7 @@
                 <div class="service-item">
                     <h4>Non specification of early stopping criteria</h4>
                     <div class="label">Training</div>
-                    <p>ML cloud services often
-                        provide options for setting early stopping criteria to prevent overfitting and
-                        reduce unnecessary computational costs.</p>
+                    <p>ML cloud services often provide options for setting early stopping criteria to prevent overfitting and reduce unnecessary computational costs.</p>
                     <button class="open-modal" data-modal="modal3">Learn More</button>
                 </div>
                 <div class="service-item">
@@ -79,9 +77,9 @@
                     <div class="label">Training</div>
                     <p>Cloud providers offer the capability
                         to run parallel training experiments to speed up the model training process
-                        and improve efficiency of the system. Disabling parallel experiments can
+                        and improve the efficiency of the system. Disabling parallel experiments can
                         slow down the model development process and limit the exploration of different
-                        approaches within using the same resources to find the best performing model.
+                        approaches within using the same resources to find the best-performing model.
                        </p>
                     <button class="open-modal" data-modal="modal4">Learn More</button>
                 </div>
@@ -97,18 +95,19 @@
                     <h4>Not using training checkpoints</h4>
                     <div class="label">Training</div>
                     <p>Cloud providers offer the functionality to
-                        resume training from the most recent checkpoint to save the experiment’s current
-                        state, rather than starting from scratch. This can save significant time and
-                        computational resources, especially when training large and complex models.However, developers may neglect to save training checkpoints in cloud storage.
+                        resume training from the most recent checkpoint to save the current
+                        state of the experiment, rather than starting from scratch. This can save significant time and
+                        computational resources, especially when training large and complex models.However, developers 
+                        may neglect to save training checkpoints in cloud storage.
                        </p>
                     <button class="open-modal" data-modal="modal6">Learn More</button>
                 </div>
                 <div class="service-item">
                     <h4>Bad choice of training compute targets</h4>
                     <div class="label">Training</div>
-                    <p>refers to selecting the none optimal
+                    <p>Refers to selecting the non-optimal
                         hardware and compute resources for training ML models. Cloud providers offer
-                        various types of training computes targets, yet not all resources can be used
+                        various types of training that compute targets, yet not all resources can be used
                         for automated machine learning, machine learning pipelines, or designer.
                        </p>
                     <button class="open-modal" data-modal="modal7">Learn More</button>
@@ -117,9 +116,9 @@
                     <h4>Excluding algorithms in automated ML</h4>
                     <div class="label">Training</div>
                     <p>Cloud providers offer automated
-                        machine learning services which for a given prediction task, they perform experiments
-                        with various ML algorithms to generate an optimized model ready for deployment
-                        . However, developers may mistakenly exclude promising candidate
+                        machine learning services that, for a given prediction task, perform experiments
+                        with various ML algorithms to generate an optimized model ready for deployment. 
+                        However, developers may mistakenly exclude a promising candidate.
                         algorithms when configuring these services, thereby limiting the effectiveness and
                         performance of the resulting model.</p>
                     <button class="open-modal" data-modal="modal8">Learn More</button>
@@ -127,7 +126,7 @@
                 <div class="service-item">
                     <h4>Misinterpreting output</h4>
                     <div class="label">Testing</div>
-                    <p>ML services offer pre-built models which operate
+                    <p>ML services offer pre-built models that operate
                         on high-dimensional continuous representations yet often ultimately produce a
                         small discrete set of outputs. Consequently, ML services’ output can contain
                         complicated, easily misinterpretable semantics, leading to bugs.</p>
@@ -136,8 +135,8 @@
                 <div class="service-item">
                     <h4>Ignoring fairness evaluation</h4>
                     <div class="label">Testing</div>
-                    <p>ML cloud providers offer the possibility of fairness
-                        evaluation which is crucial to ensure unbiased and equitable models. However,
+                    <p>ML cloud providers offer the possibility of fairness.
+                        evaluation, which is crucial to ensure unbiased and equitable models. However,
                         developers may rely solely on performance metrics such as accuracy or precision
                         to evaluate the effectiveness of a model.</p>
                     <button class="open-modal" data-modal="modal10">Learn More</button>
@@ -148,7 +147,7 @@
                     <div class="label">Testing</div>
                     <p>Cloud providers offer ML services to
                         detect unmatched data schemas, which include feature or data distribution mismatches
-                        between training, testing, and production data, often through raising
+                        between training, testing, and production data, often by raising
                         alerts. However, developers might ignore setting up these alerts or may disable
                         them.</p>
                     <button class="open-modal" data-modal="modal11">Learn More</button>
@@ -157,7 +156,7 @@
                     <h4>Using suboptimal evaluation metrics</h4>
                     <div class="label">Testing</div>
                     <p>Some ML services optimize and evaluate
-                        models based on a set of specified evaluation metrics. Those metrics determines
+                        models based on a set of specified evaluation metrics. Those metrics determine
                         how the model’s performance is measured during training and how it
                         should be evaluated during testing. However, developers sometimes choose suboptimal
                         evaluation metrics, which can lead to less effective models that do not
@@ -169,10 +168,10 @@
                     <div class="label">Deployment</div>
                     <p>Cloud providers
                         ensures ML API versioning in through several practices such as Azure API management
-                        and AWS Management Console. Without version control, it
-                        becomes challenging to track changes, revert to previous versions, or understand
+                        and AWS Management Console. Without version control, it becomes challenging to track changes, 
+                        revert to previous versions, or understand
                         the evolution of the deployed model. However, developers may ignore using those
-                        practices and unintentionally overwrite existing ML APIs without proper versioning
+                        practices and unintentionally overwrite existing ML APIs without proper versioning.
                         which can lead to potential issues in the production environment.</p>
                     <button class="open-modal" data-modal="modal13">Learn More</button>
                 </div>
@@ -200,22 +199,18 @@
                 <div class="service-item">
                     <h4>Disabling automatic scaling for online prediction service</h4>
                     <div class="label">Deployment</div>
-                    <p>Automatic
-                        scaling refers to dynamically adjusting resources based on demand to ensure
-                        sufficient capacity for online prediction services. This feature helps manage varying
-                        rates of prediction requests while minimizing cloud usage costs.
-                        However, developers may turn off automatic scaling when deploying ML models,
-                        which can significantly increase inference latency during peak demand for
-                        example.</p>
+                    <p>Automatic scaling for online prediction service helps manage varying rates of prediction requests while minimizing cloud usage costs. 
+                        Disabling this 
+                        feature stops dynamically adjusting resources based on demand to ensure sufficient capacity for online prediction services. </p>
                     <button class="open-modal" data-modal="modal16">Learn More</button>
                 </div>
              
                 <div class="service-item">
                     <h4>Improper handling of ML API limits</h4>
                     <div class="label">Serving</div>
-                    <p>Refers to the none respect of API
+                    <p>Refers to the non-respect of API
                         rate limiting. Those limits are a set of measures put in place to help ensure the
-                        stability and performance of the ML API system. However developers
+                        stability and performance of the ML API system. However, developers
                         may not take care of limits for a cloud-based ML API, leading to a sudden stop
                         in predictions when the quota is exceeded.</p>
                     <button class="open-modal" data-modal="modal17">Learn More</button>
@@ -223,30 +218,20 @@
                 <div class="service-item">
                     <h4>Misusing Synchronous/<wbr>Asynchronous APIs with deployment type</h4>
                     <div class="label">Serving</div>
-                    <p>refers to using the inappropriate APIs for the deployment endpoint. It is not recommended
+                    <p>Refers to using the inappropriate APIs for the deployment endpoint. It is not recommended
                         to use asynchronous API requests with online predictions, meaning in
                         situations that require timely inference and using synchronous APIs with batch
                         endpoint deployment, meaning when an immediate response is not required and
-                        processing accumulated data by using a single request is sufficient. However
-                        developers may ignore choosing the most suitable API request which may increase
-                        latency as well as higher memory usage when using asynchronous API
-                        with online endpoint for example because each request may keep certain resources
-                        occupied.</p>
+                        processing accumulated data by using a single request is sufficient.</p>
                     <button class="open-modal" data-modal="modal18">Learn More</button>
                 </div>
                 <div class="service-item">
                     <h4>Non modularization of ML components</h4>
                     <div class="label">Serving</div>
-                    <p>developers may ignore the importance
-                        of ML components modularity. Cloud providers highlight the huge need for
-                        modularized code for components and pipelines. For example, to construct ML
-                        pipelines, components need to be reusable, composable, and potentially shareable
-                        across ML pipelines. Therefore, while the Exploratory Data Analysis (EDA)
-                        code can still live in notebooks, the source code for components must be modularized
-                        . Modularization promotes reusability, maintainability, and scalability
-                        of machine learning workflows. However, developers may not opt for the ML
-                        production pipelines to retrain the models with new data and increase the human
-                        interventions.</p>
+                    <p>Developers may ignore the importance of the ML component's modularity. Cloud providers highlight the huge need for 
+                        modularized code for components and pipelines. Modularization promotes the reusability, maintainability, and scalability of machine learning workflows. 
+                        However, developers may not opt for the ML production pipelines to 
+                        retrain the models with new data and increase human interventions.</p>
                     <button class="open-modal" data-modal="modal19">Learn More</button>
                 </div>
                 <div class="service-item">
@@ -254,7 +239,7 @@
                     <div class="label">Serving</div>
                     <p>Cloud providers often offer multiple
                         ML APIs for the same task. Without a thorough understanding of these APIs,
-                        developers might call the wrong one, leading to significantly degraded prediction
+                        developers might call the wrong one, leading to the significantly degraded prediction
                         accuracy, incorrect prediction results, or even software failures.</p>
                     <button class="open-modal" data-modal="modal20">Learn More</button>
                 </div>
@@ -262,10 +247,10 @@
                 <div class="service-item">
                     <h4>Ignore monitoring data drift</h4>
                     <div class="label">Monitoring</div>
-                    <p>Refers to ignoring the need to continually assessing modifications to the statistical characteristics or distribution of data
+                    <p>Refers to ignoring the need to continually assess modifications to the statistical characteristics or distribution of data
                         used to ensure the expected performance. Cloud providers encourage using skew
                         and drift detection to detect when the statistical properties of the incoming
-                        data change over time in a way that affect the ML service-based system.
+                        data change over time in a way that affects the ML service-based system.
                         </p>
                     <button class="open-modal" data-modal="modal21">Learn More</button>
                 </div>
@@ -284,8 +269,8 @@
         <p><strong>ML Pipeline Development Stage:</strong> Data Collection and Preprocessing</p>
         
         <h3>Example:</h3><p>Repeatedly
-            transferring training data from cloud storage to compute nodes for each job instead
-            of caching it locally can lead to significant delays in training time, increased
+            Transferring training data from cloud storage to compute 
+            nodes for each job instead of caching it locally can lead to significant delays in training time and increased
             network traffic, and higher data transfer costs.
 </p>
 
@@ -307,8 +292,7 @@
         
         <h3>Example:</h3> <p>Not using a batch API can
             cause out-of-memory errors, excessive network traffic, and significant delays in
-            data loading, ultimately slowing down model training and increasing operational
-            costs.
+            data loading, ultimately slowing down model training and increasing operational costs.
 </p>
 
         <h3>References:</h3>
@@ -329,8 +313,8 @@
         
         <h3>Example:</h3>
         <p>Developers might neglect
-            to specify these criteria, allowing training to continue for more epochs
-            than needed. This misuse can lead to wasted computational resources, increased
+            to specify these criteria, allowing training to continue for more epochs.
+            than needed. This misuse can lead to wasted computational resources and increased
             training times, higher costs, and potential overfitting.
 </p>
 
@@ -350,10 +334,9 @@
         
         <h3>Example:</h3>
         <p>
-           Running only one training experiment at a time instead of concurrently
-            testing multiple configurations may reduce efficiency because we can
-            not quickly compare different models or hyperparmeters which is essential for
-            optimizing model performance.
+            Running only one training experiment at a time instead of concurrently testing multiple configurations may reduce 
+            efficiency because we can not quickly compare different models or hyperparameters, which is essential 
+            for optimizing model performance.
 
         </p>
         <h3>References:</h3>
@@ -373,9 +356,8 @@
         <h2>Not using automatic hyperparameter tuning</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Training</p>
         
-        <h3>Example:</h3> <p>Dvelopers may not leverage this feature and
-            they might manually set hyperparameters, leading to potential suboptimal model
-            performance and increased training time.
+        <h3>Example:</h3> <p>Developers may not leverage this feature, and they might manually set hyperparameters, 
+            leading to a potential suboptimal model performance and increased training time.
 </p>
         <h3>References:</h3>
         <ul>
@@ -391,10 +373,8 @@
         <p><strong>ML Pipeline Development Stage:</strong> Training</p>
         
         <h3>Example:</h3> <p> If a model fails and checkpoints have not been saved, the entire
-            training job or pipeline will terminate, resulting in a loss of data since the model’s
             state is not preserved in memory. Proper use of training checkpoints ensures
-            that progress is not lost and allows for more efficient and cost-effective training
-            processes
+            that progress is not lost and allows for more efficient and cost-effective training processes.
 </p>
 
         <h3>References:</h3>
@@ -429,7 +409,9 @@
         <h2>Excluding algorithms in automated ML</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Training</p>
         
-        <h3>Example:</h3>
+        <h3>Example:</h3> <p>The excluded algorithms may provide better accuracy or performance metrics for the developer's 
+            specific task/dataset. 
+            This probably introduces an unintended bias related to the model selection process.</p>
 
         <h3>References:</h3>
         <ul>
@@ -444,9 +426,9 @@
         <h2>Misinterpreting output</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Testing</p>
         
-        <h3>Example:</h3> <p> Developers may misinterpret the score/magnitude as the output of sentiment
-            analysis API. According to Google’s documentation, score/magnitude
-            should be used together to judge the sentiment of the input text which makes it
+        <h3>Example:</h3> <p> Developers may misinterpret the score or magnitude as the output of sentiment.
+            analysis API. According to Google’s documentation, score or magnitude
+            should be used together to judge the sentiment of the input text, which makes it
             prone to human errors.
 </p>
 
@@ -466,9 +448,9 @@
         <h2>Ignoring fairness evaluation</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Testing</p>
         
-        <h3>Example:</h3> <p>Neglecting fairness
-            evaluation can lead to potential biases and unfair predictions towards specific
-            demographic groups which may negatively impact the generalizability and
+        <h3>Example:</h3> <p>
+            Neglecting fairness evaluation can lead to potential biases and unfair predictions about specific
+            demographic groups, which may negatively impact the generalizability and
             performance of the model.
 </p>
 
@@ -485,12 +467,11 @@
         <h2>Ignoring testing schema mismatch</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Testing</p>
         
-        <h3>Example:</h3> <p>Amazon ML displays alerts if the schema for the training
-            and evaluation data sources is not consistent. Disabling these alerts can result
-            in missing discrepancies, such as features present in the training data but
-            absent in the evaluation data, or detecting unexpected additional features. 
-            This oversight can lead to inaccurate model predictions and reduced performance in
-            production.
+        <h3>Example:</h3> <p>
+            Amazon ML displays alerts if the schema for the training and evaluation data sources are not consistent. 
+            Disabling these alerts can result inin missing discrepancies, such as 
+            features present in the training data butabsent in the evaluation data, or 
+            detecting unexpected additional features. This oversight can lead to inaccurate model predictions and reduced performance.     
 </p>
 
         <h3>References:</h3>
@@ -526,8 +507,9 @@
         <h2>Overwriting existing ML APIs without versioning</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Deployment</p>
         
-        <h3>Example:</h3><p> When publishing an updated model using Azure ML Studio, if the existing
-            API is overwritten without versioning and the new model introduces
+        <h3>Example:</h3><p> 
+            When publishing an updated model using Azure ML Studio, if the existing API is overwritten without 
+            versioning, and the new model introduces
             unexpected behavior or lower accuracy, it becomes difficult to roll back to the
             previous version, leading to potential disruptions in the production system.
 </p>
@@ -547,8 +529,7 @@
         <h2>Choosing the wrong deployment endpoint</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Deployment</p>
         
-        <h3>Example:</h3><p> Using a batch endpoint for
-            a real time task in place of online endpoint may lead to delayed inferences.
+        <h3>Example:</h3><p> Using a batch endpoint for a real-time task in place of an online endpoint may lead to delayed inferences.        
 </p>
 
         <h3>References:</h3>
@@ -565,12 +546,15 @@
         <h2>Disabling automatic rollbacks</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Deployment</p>
         
-        <h3>Example:</h3>
+        <h3>Example:</h3> <p>If automatic rollback is disabled, any problem will need to be manually resolved in order to revert 
+            to the earlier version of the app following each new deployment with an update. 
+            This may result in downtimes because of the time-consuming nature of manual rollback.</p>
 
         <h3>References:</h3>
         <ul>
             <li><a href="https://bit.ly/3SdMxp7" target="_blank">Reference 1</a></li>
             <li><a href="https://bit.ly/4d5bVph" target="_blank">Reference 2</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/rollback-on-error" target="_blank">Reference 3</a></li>
             <li><p>Serban, A., Van der Blom, K., Hoos, H., Visser, J.: Adoption and effects of software engineering best practices in machine learning. In: Proceedings of the 14th
                 ACM/IEEE International Symposium on Empirical Software Engineering and
                 Measurement (ESEM). pp. 1–12 (2020)
@@ -586,7 +570,8 @@
         <h2>Disabling automatic scaling for online prediction service</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Deployment</p>
         
-        <h3>Example:</h3>
+        <h3>Example:</h3><p>Developers may turn off automatic scaling when deploying ML models, 
+            which can significantly increase inference latency during peak demand for example.</p>
 
         <h3>References:</h3>
         <ul>
@@ -603,10 +588,13 @@
         <h2>Improper handling of ML API limits</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Serving</p>
         
-        <h3>Example:</h3> <p> Exceeding the maximum
-            prompt tokens per request set by Azure OpenAI service  and not controlling
-            the size of the input prompt may lead to truncating the input to fit with the
-            limit and that lead to information loss.
+        <h3>Example:</h3> <p> 
+            Exceeding the maximum
+            prompt tokens per request set by the Azure OpenAI service, 
+            and not controlling the size of the input prompt may lead to truncating the input to fit with the
+            limit, and that leads to information loss.
+            
+            
 </p>
 
         <h3>References:</h3>
@@ -623,7 +611,9 @@
         <h2>Misusing Synchronous/Asynchronous APIs with deployment</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Serving</p>
         
-        <h3>Example:</h3>
+        <h3>Example:</h3><p>Developers may ignore choosing the most suitable API request which may increase 
+            latency as well as higher memory usage when using asynchronous API with online endpoint for example, 
+            because each request may keep certain resources occupied.</p>
 
         <h3>References:</h3>
         <ul>
@@ -639,7 +629,10 @@
         <h2>Non modularization of ML components</h2>
         <p><strong>ML Pipeline Development Stage:</strong> Serving</p>
         
-        <h3>Example:</h3><p>The increasing need to manually test the pipeline and
+        <h3>Example:</h3><p>For example, to construct ML pipelines, components need to be reusable, 
+            composable, and potentially shareable across ML pipelines. Therefore, 
+            while the Exploratory Data Analysis (EDA) code can still live in notebooks, 
+            the source code for components must be modularized. This will decrease the need to manually test the pipeline and
             its components as well as manually deploy new pipeline implementations.
 </p>
 
@@ -662,7 +655,7 @@
             while object detection provides a tag for each object. Using image classification
             instead of object detection can cause the software to miss important objects,
             and using object detection instead of image classification can result in incorrect
-            image tags
+            image tags.
 </p>
 
         <h3>References:</h3>
