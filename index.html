@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
     <header>
         <nav>
             <ul>
                 <li><a href="#" data-modal="modalAbout">About</a></li>
-                <li><a href="#" data-modal="modalContact">Contact</a></li>
+                <li><a href="#" data-modal="modalRef">References</a></li>
+
             </ul>
         </nav>
         
@@ -27,11 +29,14 @@
     </div>
 </div>
 
-<div id="modalContact" class="modal contact-modal">
-    <div class="modal-content contact-modal-content">
-        <span class="close-btn" data-modal="modalContact">&times;</span>
-        <h2>Contact Details</h2>
-        <p>hadil.ben-amor.1@ens.etsmtl.ca</p>
+
+<div id="modalRef" class="modal ref-modal">
+    <div class="modal-content ref-modal-content">
+        <span class="close-btn" data-modal="modalRef">&times;</span>
+        <h2>References</h2>
+        <p>1. Smith, J. (2023). Machine Learning in Practice. Tech Publishing.</p>
+        <p>2. Doe, A. (2022). Ethical AI Use Cases. AI Ethics Journal.</p>
+        <p>3. Lee, T. (2024). Avoiding Common ML Pitfalls. ML Research Review.</p>
     </div>
 </div>
 
@@ -225,15 +230,7 @@
                         processing accumulated data by using a single request is sufficient.</p>
                     <button class="open-modal" data-modal="modal18">Learn More</button>
                 </div>
-                <div class="service-item">
-                    <h4>Non modularization of ML components</h4>
-                    <div class="label">Serving</div>
-                    <p>Developers may ignore the importance of the ML component's modularity. Cloud providers highlight the huge need for 
-                        modularized code for components and pipelines. Modularization promotes the reusability, maintainability, and scalability of machine learning workflows. 
-                        However, developers may not opt for the ML production pipelines to 
-                        retrain the models with new data and increase human interventions.</p>
-                    <button class="open-modal" data-modal="modal19">Learn More</button>
-                </div>
+                
                 <div class="service-item">
                     <h4>Calling the wrong ML service API</h4>
                     <div class="label">Serving</div>
@@ -242,6 +239,15 @@
                         developers might call the wrong one, leading to the significantly degraded prediction
                         accuracy, incorrect prediction results, or even software failures.</p>
                     <button class="open-modal" data-modal="modal20">Learn More</button>
+                </div>
+                <div class="service-item">
+                    <h4>Non modularization of ML components</h4>
+                    <div class="label">Serving</div>
+                    <p>Developers may ignore the importance of the ML component's modularity. Cloud providers highlight the huge need for 
+                        modularized code for components and pipelines. Modularization promotes the reusability, maintainability, and scalability of machine learning workflows. 
+                        However, developers may not opt for the ML production pipelines to 
+                        retrain the models with new data and increase human interventions.</p>
+                    <button class="open-modal" data-modal="modal19">Learn More</button>
                 </div>
 
                 <div class="service-item">
@@ -254,6 +260,8 @@
                         </p>
                     <button class="open-modal" data-modal="modal21">Learn More</button>
                 </div>
+
+                
             </div>
         </section>
     </main>
@@ -300,6 +308,7 @@
             <li> <p>Cao, J., Chen, B., Sun, C., Hu, L., Wu, S., Peng, X.: Understanding performance problems in deep learning systems.
                 In: Proceedings of the 30th ACM Joint European 
                Software Engineering Conference and Symposium on the Foundations of Software Engineering. pp. 357–369 (2022)</p></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/search/search-howto-large-index#batch-multiple-documents-per-request" target="_blank">Batch API </a></li>
 
         </ul>
     </div>
@@ -320,8 +329,10 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://cloud.google.com/bigquery/docs/preventing-overfitting" target="_blank">Reference 1</a></li>
-            <li><a href="https://shorturl.at/GYfWu" target="_blank">Reference 2</a></li>
+            <li> <p>Xue Ying. An overview of overfitting and its solutions. In Journal of
+                physics: Conference series, volume 1168, page 022022. IOP Publishing,
+                2019.</p></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/machine-learning/how-to-tune-hyperparameters?view=azureml-api-2" target="_blank">Early stopping criteria</a></li>
  
         </ul>
     </div>
@@ -341,11 +352,12 @@
         </p>
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/3Sdj7rt" target="_blank">Reference 1</a></li>
-            <li><p>Serban, A., Van der Blom, K., Hoos, H., Visser, J.: Adoption and effects of software engineering best practices in machine learning. In: Proceedings of the 14th
+            <li> <p>Serban, A., Van der Blom, K., Hoos, H., Visser, J.: Adoption and effects of software engineering best practices in machine learning. In: Proceedings of the 14th
                 ACM/IEEE International Symposium on Empirical Software Engineering and
-                Measurement (ESEM). pp. 1–12 (2020)
-                </p>></li>
+                Measurement (ESEM). pp. 1–12 (2020)</p></li>
+                <li><a href="https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/train-and-score-hundreds-of-thousands-of-models-in-parallel/ba-p/1547960" target="_blank">Train and Score Hundreds of Thousands of Models in Parallel</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/python/api/azureml-core/azureml.core.scriptrunconfig?view=azure-ml-py" target="_blank">ScriptRunConfig class</a></li>
+
 
         </ul>
     </div>
@@ -357,11 +369,17 @@
         <p><strong>ML Pipeline Development Stage:</strong> Training</p>
         
         <h3>Example:</h3> <p>Developers may not leverage this feature, and they might manually set hyperparameters, 
-            leading to a potential suboptimal model performance and increased training time.
-</p>
+            leading to a potential suboptimal model performance and increased training time.</p>
         <h3>References:</h3>
         <ul>
-            <li><a href="https://shorturl.at/GYfWu" target="_blank">Reference 1</a></li>
+            <li><p>Hilde JP Weerts, Andreas C Mueller, and Joaquin Vanschoren. Importance of tuning hyperparameters of machine learning algorithms. arXiv
+                preprint arXiv:2007.07588, 2020.
+                </p></li>
+            <li><p> A Helen Victoria and Ganesh Maragatham. Automatic tuning of hyperparameters using bayesian optimization. Evolving Systems, 12(1):217–
+                223, 2021.
+                </p></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/machine-learning/how-to-tune-hyperparameters?view=azureml-api-2" target="_blank">Hyperparameters tuning</a></li>
+
 
         </ul>
     </div>
@@ -379,7 +397,17 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://shorturl.at/mFzuU" target="_blank">Reference 1</a></li>
+            <li><p>Xiangzhe Xu, Hongyu Liu, Guanhong Tao, Zhou Xuan, and Xiangyu
+                Zhang. Checkpointing and deterministic training for deep learning. In
+                Proceedings of the 1st International Conference on AI Engineering:
+                Software Engineering for AI, pages 65–76, 2022
+                </p></li>
+            <li><p> Elvis Rojas, Albert Njoroge Kahira, Esteban Meneses,
+                Leonardo Bautista Gomez, and Rosa M Badia. A study of
+                checkpointing in large scale training of deep neural networks.
+                arXiv preprint arXiv:2012.00825, 2020.
+                </p></li>
+            <li><a href="https://cloud.google.com/architecture/ml-on-gcp-best-practices#use-training-checkpoints-to-save-the-current-state-of-your-experiment" target="_blank">Training checkpoints</a></li>
 
         </ul>
     </div>
@@ -397,8 +425,7 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/3SfkAxo" target="_blank">Reference 1</a></li>
-            <li><a href="https://bit.ly/4bOmGLA" target="_blank">Reference 2</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/machine-learning/concept-compute-target?view=azureml-api-2#training-compute-targets" target="_blank">Training compute targets</a></li>
       
         </ul>
     </div>
@@ -415,7 +442,7 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://shorturl.at/2Tthd" target="_blank">Reference 1</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/machine-learning/concept-automated-ml?view=azureml-api-2" target="_blank">Automated machine learning</a></li>
 
         </ul>
     </div>
@@ -434,7 +461,7 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/3Y6sUmH" target="_blank">Reference 1</a></li>
+            <li><a href="https://cloud.google.com/natural-language/docs/analyzing-sentiment" target="_blank">Cloud Natural Language: Analyzing Sentiment</a></li>
             <li> <p>Wan, C., Liu, S., Hoffmann, H., Maire, M., Lu, S.: Are machine learning cloud apis
                 used correctly? In: 2021 IEEE/ACM 43rd International Conference on Software
                 Engineering (ICSE). pp. 125–137. IEEE (2021)</p></li>
@@ -456,7 +483,14 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://shorturl.at/0GHFT" target="_blank">Reference 1</a></li>
+            <li> <p>Ninareh Mehrabi, Fred Morstatter, Nripsuta Saxena, Kristina Lerman,
+                and Aram Galstyan. A survey on bias and fairness in machine learning.
+                ACM computing surveys (CSUR), 54(6):1–35, 2021.</p></li>
+                <li> <p>Nuno Antunes, Leandro Balby, Flavio Figueiredo, Nuno Lourenco,
+                    Wagner Meira, and Walter Santos. Fairness and transparency of machine
+                    learning for trustworthy cloud services. In 2018 48th Annual IEEE/IFIP
+                    International Conference on Dependable Systems and Networks Workshops (DSN-W), pages 188–193. IEEE, 2018.</p></li>
+            <li><a href="https://docs.aws.amazon.com/pt_br/wellarchitected/latest/machine-learning-lens/mloe-09.html" target="_blank">Review fairness</a></li>
          
         </ul>
     </div>
@@ -476,7 +510,10 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://shorturl.at/z6L57" target="_blank">Reference 1</a></li>
+            <li> <p>Neoklis Polyzotis, Martin Zinkevich, Sudip Roy, Eric Breck, and Steven
+                Whang. Data validation for machine learning. Proceedings of machine
+                learning and systems, 1:334–347, 2019</p></li>
+            <li><a href="https://docs.aws.amazon.com/machine-learning/latest/dg/evaluation-alerts.html" target="_blank">Evaluation Alerts: schema mismatch</a></li>
    
         </ul>
     </div>
@@ -496,7 +533,9 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://shorturl.at/B3vXJ" target="_blank">Reference 1</a></li>
+            <li> <p>MZ Naser and Amir Alavi. Insights into performance fitness and error
+                metrics for machine learning. arXiv preprint arXiv:2006.00887, 2020</p></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-train?view=azureml-api-2&tabs=python#primary-metric" target="_blank">Primary metric for evaluation</a></li>
    
         </ul>
     </div>
@@ -516,9 +555,9 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/4cYcr8u" target="_blank">Reference 1</a></li>
-            <li><a href="https://go.aws/46bLfAU" target="_blank">Reference 2</a></li>
-            <li><a href="https://bit.ly/3Ludilv" target="_blank">Reference 3</a></li>
+            <li><a href="https://stackoverflow.com/questions/51940106/what-is-the-best-practice-to-develop-cd-ci-when-you-use-ml-studio-apis" target="_blank">Reference 1</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts" target="_blank">Reference 2</a></li>
+            <li><a href="https://docs.aws.amazon.com/comprehend/latest/dg/model-versioning.html" target="_blank">Reference 3</a></li>
      
         </ul>
     </div>
@@ -534,8 +573,7 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/3y6haWN" target="_blank">Reference 1</a></li>
-            <li><a href="https://bit.ly/4bLsplb" target="_blank">Reference 2</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints?view=azureml-api-2" target="_blank">Endpoints for inference in production</a></li>
  
         </ul>
     </div>
@@ -552,13 +590,13 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/3SdMxp7" target="_blank">Reference 1</a></li>
-            <li><a href="https://bit.ly/4d5bVph" target="_blank">Reference 2</a></li>
-            <li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/rollback-on-error" target="_blank">Reference 3</a></li>
             <li><p>Serban, A., Van der Blom, K., Hoos, H., Visser, J.: Adoption and effects of software engineering best practices in machine learning. In: Proceedings of the 14th
                 ACM/IEEE International Symposium on Empirical Software Engineering and
                 Measurement (ESEM). pp. 1–12 (2020)
                 </p></li>
+            <li><a href="https://martinfowler.com/articles/cd4ml.html" target="_blank">Continuous Delivery for Machine Learning</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/rollback-on-error" target="_blank">Rollback on error to successful deployment</a></li>
+            
 
 
         </ul>
@@ -575,9 +613,11 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/3W8Ouog" target="_blank">Reference 1</a></li>
-            <li><a href="https://bit.ly/3zMZYX3" target="_blank">Reference 2</a></li>
-            <li><a href="https://bit.ly/4bLsy8d" target="_blank">Reference 3</a></li>
+            <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/scaling-machine-learning-predictions?hl=en" target="_blank">How to automatically scale your machine learning predictions</a></li>
+            <li><a href="https://cloud.google.com/architecture/ml-on-gcp-best-practices#turn-on-automatic" target="_blank">Best practices for implementing machine learning on Google Cloud </a></li>
+            <li><a href="https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html" target="_blank">Application Auto Scaling</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/machine-learning/how-to-autoscale-endpoints?view=azureml-api-2&tabs=cli" target="_blank">Autoscale online endpoints in Azure Machine Learning</a></li>
+
     
         </ul>
     </div>
@@ -599,9 +639,9 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/3YaSs2m" target="_blank">Reference 1</a></li>
-            <li><a href="https://bit.ly/4d4C1bW" target="_blank">Reference 2</a></li>
-            <li><a href="https://bit.ly/3WdW54K" target="_blank">Reference 3</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits#quotas-and-limits-reference" target="_blank">Quotas and limits reference</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/language-service/concepts/data-limits" target="_blank">Service limits for Azure AI Language</a></li>
+            <li><a href="https://techcommunity.microsoft.com/t5/fasttrack-for-azure/optimizing-azure-openai-a-guide-to-limits-quotas-and-best/ba-p/4076268" target="_blank">Optimizing Azure OpenAI</a></li>
         </ul>
     </div>
 </div>
@@ -617,8 +657,13 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/46dzMAE" target="_blank">Reference 1</a></li>
-            <li><a href="https://bit.ly/4bXR3PW" target="_blank">Reference 2</a></li>
+            <li><p>Chengcheng Wan, Shicheng Liu, Henry Hoffmann, Michael Maire, and
+                Shan Lu. Are machine learning cloud apis used correctly? In 2021
+                IEEE/ACM 43rd International Conference on Software Engineering
+                (ICSE), pages 125–137. IEEE, 2021
+                </p></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply" target="_blank">Asynchronous Request-Reply pattern</a></li>
+            <li><a href="https://cloud.google.com/vertex-ai/docs/predictions/get-predictions#deploy_a_model_to_an_endpoint" target="_blank">Vertex AI predictions</a></li>
 
         </ul>
     </div>
@@ -638,8 +683,8 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/4bLsOnH" target="_blank">Reference 1</a></li>
-            <li><a href="https://go.aws/3xUspSi" target="_blank">Reference 2</a></li>
+            <li><a href="https://aws.amazon.com/blogs/architecture/architecting-for-machine-learning/" target="_blank">Architecting for Machine Learning</a></li>
+            <li><a href="https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning" target="_blank">MLOps: Continuous delivery and automation</a></li>
 
         </ul>
     </div>
@@ -679,11 +724,20 @@
 
         <h3>References:</h3>
         <ul>
-            <li><a href="https://bit.ly/4cOpdGM" target="_blank">Reference 1</a></li>
+            <li><p>Carol Bova, Carol Jaffarian, Sybil Crawford, Jose Bernardo Quintos,
+                Mary Lee, and Susan Sullivan-Bolyai. Intervention fidelity: monitoring
+                drift, providing feedback, and assessing the control condition. Nursing
+                research, 66(1):54–59, 2017.</p></li>
+            <li><p>Ankur Mallick, Kevin Hsieh, Behnaz Arzani, and Gauri Joshi. Matchmaker: Data drift mitigation in machine learning for large-scale systems.
+                    Proceedings of Machine Learning and Systems, 4:77–94, 2022.</p></li>
+            <li><a href="https://cloud.google.com/architecture/ml-on-gcp-best-practices#fine-tune-alert-thresholds" target="_blank">Google cloud: detect data drift</a></li>
 
         </ul>
     </div>
 </div>
+
+
+
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -747,8 +801,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
-
-        
     </main>
     <footer>
         <p>&copy; 2024</p>
